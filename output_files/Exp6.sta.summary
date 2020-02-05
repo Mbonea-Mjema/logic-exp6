@@ -2,76 +2,40 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'coin[0]'
-Slack : -6.491
-TNS   : -19.658
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -1.419
+TNS   : -3.336
 
-Type  : Slow 1200mV 85C Model Setup '_choice[0]'
-Slack : -4.615
-TNS   : -9.116
-
-Type  : Slow 1200mV 85C Model Hold 'coin[0]'
-Slack : -0.760
-TNS   : -0.760
-
-Type  : Slow 1200mV 85C Model Hold '_choice[0]'
-Slack : 3.986
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 0.701
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'coin[0]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -3.339
+TNS   : -6.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width '_choice[0]'
-Slack : -3.000
-TNS   : -3.000
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -1.160
+TNS   : -2.677
 
-Type  : Slow 1200mV 0C Model Setup 'coin[0]'
-Slack : -5.834
-TNS   : -17.283
-
-Type  : Slow 1200mV 0C Model Setup '_choice[0]'
-Slack : -4.221
-TNS   : -8.340
-
-Type  : Slow 1200mV 0C Model Hold 'coin[0]'
-Slack : -0.681
-TNS   : -0.681
-
-Type  : Slow 1200mV 0C Model Hold '_choice[0]'
-Slack : 3.762
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.631
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width '_choice[0]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -3.000
+TNS   : -6.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'coin[0]'
-Slack : -3.000
-TNS   : -3.000
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -0.341
+TNS   : -0.499
 
-Type  : Fast 1200mV 0C Model Setup 'coin[0]'
-Slack : -3.374
-TNS   : -8.749
-
-Type  : Fast 1200mV 0C Model Setup '_choice[0]'
-Slack : -2.113
-TNS   : -4.170
-
-Type  : Fast 1200mV 0C Model Hold 'coin[0]'
-Slack : -0.415
-TNS   : -0.415
-
-Type  : Fast 1200mV 0C Model Hold '_choice[0]'
-Slack : 2.153
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 0.369
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'coin[0]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -7.494
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width '_choice[0]'
-Slack : -3.000
-TNS   : -3.144
+TNS   : -6.165
 
 ------------------------------------------------------------

@@ -1,0 +1,296 @@
+$comment
+	File created using the following command:
+		vcd file Exp6.msim.vcd -direction
+$end
+$date
+	Thu Feb 06 00:25:05 2020
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Vend_FSM_vlg_vec_tst $end
+$var reg 1 ! cancel $end
+$var reg 4 " choice [3:0] $end
+$var reg 1 # clock $end
+$var reg 2 $ coin [1:0] $end
+$var reg 1 % reset $end
+$var wire 1 & change [2] $end
+$var wire 1 ' change [1] $end
+$var wire 1 ( change [0] $end
+$var wire 1 ) state [2] $end
+$var wire 1 * state [1] $end
+$var wire 1 + state [0] $end
+$var wire 1 , vend [3] $end
+$var wire 1 - vend [2] $end
+$var wire 1 . vend [1] $end
+$var wire 1 / vend [0] $end
+$var wire 1 0 sampler $end
+$scope module i1 $end
+$var wire 1 1 gnd $end
+$var wire 1 2 vcc $end
+$var wire 1 3 unknown $end
+$var tri1 1 4 devclrn $end
+$var tri1 1 5 devpor $end
+$var tri1 1 6 devoe $end
+$var wire 1 7 Mux1~0_combout $end
+$var wire 1 8 Mux1~1_combout $end
+$var wire 1 9 reset~input_o $end
+$var wire 1 : cancel~input_o $end
+$var wire 1 ; coin[1]~input_o $end
+$var wire 1 < state[0]~output_o $end
+$var wire 1 = state[1]~output_o $end
+$var wire 1 > state[2]~output_o $end
+$var wire 1 ? vend[0]~output_o $end
+$var wire 1 @ vend[1]~output_o $end
+$var wire 1 A vend[2]~output_o $end
+$var wire 1 B vend[3]~output_o $end
+$var wire 1 C change[0]~output_o $end
+$var wire 1 D change[1]~output_o $end
+$var wire 1 E change[2]~output_o $end
+$var wire 1 F clock~input_o $end
+$var wire 1 G clock~inputclkctrl_outclk $end
+$var wire 1 H coin[0]~input_o $end
+$var wire 1 I Mux0~1_combout $end
+$var wire 1 J state[0]~4 $end
+$var wire 1 K state[1]~5_combout $end
+$var wire 1 L choice[0]~input_o $end
+$var wire 1 M vend~0_combout $end
+$var wire 1 N state[1]~reg0_q $end
+$var wire 1 O Mux0~2_combout $end
+$var wire 1 P state[1]~6 $end
+$var wire 1 Q state[2]~7_combout $end
+$var wire 1 R state[2]~reg0_q $end
+$var wire 1 S Mux0~0_combout $end
+$var wire 1 T state[0]~3_combout $end
+$var wire 1 U state[0]~reg0_q $end
+$var wire 1 V choice[1]~input_o $end
+$var wire 1 W vend~1_combout $end
+$var wire 1 X choice[2]~input_o $end
+$var wire 1 Y vend~2_combout $end
+$var wire 1 Z choice[3]~input_o $end
+$var wire 1 [ vend~3_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+0#
+b1 $
+0%
+0(
+0'
+0&
+0+
+0*
+0)
+0/
+0.
+0-
+0,
+x0
+01
+12
+x3
+14
+15
+16
+17
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+1H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+1P
+0Q
+0R
+1S
+1T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+$end
+#50000
+1#
+1F
+1G
+00
+1U
+0S
+1J
+0T
+1I
+07
+1<
+1+
+0J
+1T
+1K
+18
+#100000
+0#
+0F
+0G
+10
+#150000
+1#
+1F
+1G
+00
+1N
+1O
+0P
+0K
+08
+1=
+1*
+1P
+1K
+1Q
+#200000
+b11 $
+b10 $
+0#
+0H
+1;
+0F
+0G
+10
+1S
+1J
+0T
+0P
+0K
+0Q
+#250000
+1#
+1F
+1G
+00
+0U
+0N
+0S
+0J
+1T
+0O
+1P
+1K
+18
+0<
+0=
+0+
+0*
+0T
+#300000
+0#
+0F
+0G
+10
+#350000
+1#
+1F
+1G
+00
+1N
+1O
+0P
+0K
+08
+1=
+1*
+1P
+1K
+1Q
+#400000
+b0 $
+0#
+0;
+0F
+0G
+10
+0I
+0O
+0Q
+#450000
+1#
+1F
+1G
+00
+#500000
+0#
+0F
+0G
+10
+#550000
+1#
+1F
+1G
+00
+#600000
+0#
+0F
+0G
+10
+#650000
+1#
+1F
+1G
+00
+#700000
+0#
+0F
+0G
+10
+#750000
+1#
+1F
+1G
+00
+#800000
+0#
+0F
+0G
+10
+#850000
+1#
+1F
+1G
+00
+#900000
+0#
+0F
+0G
+10
+#950000
+1#
+1F
+1G
+00
+#1000000
