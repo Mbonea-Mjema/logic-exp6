@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Exp6
-Tue Dec 17 13:44:17 2019
+Tue Dec 17 22:31:17 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,16 +44,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 17 13:44:17 2019           ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 17 22:31:17 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Exp6                                            ;
 ; Top-level Entity Name              ; Vend_FSM                                        ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 29                                              ;
-;     Total combinational functions  ; 29                                              ;
+; Total logic elements               ; 42                                              ;
+;     Total combinational functions  ; 42                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 22                                              ;
+; Total pins                         ; 28                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -168,34 +168,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------+---------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 29          ;
-;                                             ;             ;
-; Total combinational functions               ; 29          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 8           ;
-;     -- 3 input functions                    ; 11          ;
-;     -- <=2 input functions                  ; 10          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 29          ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 0           ;
-;     -- Dedicated logic registers            ; 0           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 22          ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 9           ;
-; Total fan-out                               ; 117         ;
-; Average fan-out                             ; 1.60        ;
-+---------------------------------------------+-------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 42             ;
+;                                             ;                ;
+; Total combinational functions               ; 42             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 18             ;
+;     -- 3 input functions                    ; 13             ;
+;     -- <=2 input functions                  ; 11             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 42             ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 0              ;
+;     -- Dedicated logic registers            ; 0              ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 28             ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+; Maximum fan-out node                        ; state[1]$latch ;
+; Maximum fan-out                             ; 12             ;
+; Total fan-out                               ; 175            ;
+; Average fan-out                             ; 1.79           ;
++---------------------------------------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -203,7 +203,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Vend_FSM                  ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |Vend_FSM           ; work         ;
+; |Vend_FSM                  ; 42 (42)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |Vend_FSM           ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -213,17 +213,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; vend_enable[0]                                      ; Selector7           ; yes                    ;
-; vend_enable[1]                                      ; Selector7           ; yes                    ;
-; vend_enable[2]                                      ; Selector7           ; yes                    ;
-; vend_enable[3]                                      ; Selector7           ; yes                    ;
-; next_state[1]                                       ; Selector9           ; yes                    ;
-; next_state[2]                                       ; Selector9           ; yes                    ;
-; next_state[3]                                       ; Selector9           ; yes                    ;
-; next_state[4]                                       ; Selector9           ; yes                    ;
-; _change[1]$latch                                    ; WideOr2             ; yes                    ;
-; _change[2]$latch                                    ; WideOr2             ; yes                    ;
-; Number of user-specified and inferred latches = 10  ;                     ;                        ;
+; vend_enable[0]                                      ; Selector8           ; yes                    ;
+; vend_enable[1]                                      ; Selector8           ; yes                    ;
+; vend_enable[2]                                      ; Selector8           ; yes                    ;
+; vend_enable[3]                                      ; Selector8           ; yes                    ;
+; state[1]$latch                                      ; state[5]            ; yes                    ;
+; state[2]$latch                                      ; state[5]            ; yes                    ;
+; state[3]$latch                                      ; state[5]            ; yes                    ;
+; state[4]$latch                                      ; state[5]            ; yes                    ;
+; _change[1]$latch                                    ; _change[2]          ; yes                    ;
+; _change[2]$latch                                    ; _change[2]          ; yes                    ;
+; return[1]$latch                                     ; _cancel             ; yes                    ;
+; return[2]$latch                                     ; _cancel             ; yes                    ;
+; return[3]$latch                                     ; _cancel             ; yes                    ;
+; return[4]$latch                                     ; _cancel             ; yes                    ;
+; next_state[1]                                       ; Selector7           ; yes                    ;
+; next_state[2]                                       ; Selector7           ; yes                    ;
+; next_state[3]                                       ; Selector7           ; yes                    ;
+; next_state[4]                                       ; Selector7           ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -279,109 +287,136 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Dec 17 13:44:15 2019
+    Info: Processing started: Tue Dec 17 22:31:15 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Exp6 -c Exp6
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (10463): Verilog HDL Declaration warning at Vend_FSM.v(25): "return" is SystemVerilog-2005 keyword
+Warning (10463): Verilog HDL Declaration warning at Vend_FSM.v(33): "return" is SystemVerilog-2005 keyword
 Info (12021): Found 1 design units, including 1 entities, in source file vend_fsm.v
     Info (12023): Found entity 1: Vend_FSM
 Info (12127): Elaborating entity "Vend_FSM" for the top level hierarchy
-Critical Warning (10237): Verilog HDL warning at Vend_FSM.v(63): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
-Warning (10270): Verilog HDL Case Statement warning at Vend_FSM.v(72): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(69): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(69): inferring latch(es) for variable "vend_enable", which holds its previous value in one or more paths through the always construct
-Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(121): variable "_choice" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(124): variable "vend" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(126): variable "vend" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(131): variable "vend" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(135): variable "stop" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(136): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(141): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10764): Verilog HDL warning at Vend_FSM.v(141): converting signed shift amount to unsigned
-Warning (10230): Verilog HDL assignment warning at Vend_FSM.v(141): truncated value with size 6 to match size of target (3)
-Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(120): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(120): inferring latch(es) for variable "count", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(120): inferring latch(es) for variable "stop", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(120): inferring latch(es) for variable "_change", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "_change[0]" at Vend_FSM.v(120)
-Info (10041): Inferred latch for "_change[1]" at Vend_FSM.v(120)
-Info (10041): Inferred latch for "_change[2]" at Vend_FSM.v(120)
-Info (10041): Inferred latch for "stop" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[0]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[1]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[2]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[3]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[4]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[5]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[6]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[7]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[8]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[9]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[10]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[11]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[12]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[13]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[14]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[15]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[16]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[17]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[18]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[19]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[20]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[21]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[22]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[23]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[24]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[25]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[26]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[27]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[28]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[29]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[30]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "count[31]" at Vend_FSM.v(131)
-Info (10041): Inferred latch for "vend_enable[0]" at Vend_FSM.v(69)
-Info (10041): Inferred latch for "vend_enable[1]" at Vend_FSM.v(69)
-Info (10041): Inferred latch for "vend_enable[2]" at Vend_FSM.v(69)
-Info (10041): Inferred latch for "vend_enable[3]" at Vend_FSM.v(69)
-Info (10041): Inferred latch for "next_state[0]" at Vend_FSM.v(69)
-Info (10041): Inferred latch for "next_state[1]" at Vend_FSM.v(69)
-Info (10041): Inferred latch for "next_state[2]" at Vend_FSM.v(69)
-Info (10041): Inferred latch for "next_state[3]" at Vend_FSM.v(69)
-Info (10041): Inferred latch for "next_state[4]" at Vend_FSM.v(69)
-Info (10041): Inferred latch for "next_state[5]" at Vend_FSM.v(69)
+Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(60): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(60): inferring latch(es) for variable "return", which holds its previous value in one or more paths through the always construct
+Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(85): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at Vend_FSM.v(85): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(77): inferring latch(es) for variable "vend_enable", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(77): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct
+Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(135): variable "_choice" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(141): variable "vend" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(143): variable "vend" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(148): variable "vend" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(152): variable "stop" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(153): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Vend_FSM.v(158): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10764): Verilog HDL warning at Vend_FSM.v(158): converting signed shift amount to unsigned
+Warning (10230): Verilog HDL assignment warning at Vend_FSM.v(158): truncated value with size 6 to match size of target (3)
+Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(134): inferring latch(es) for variable "_change", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(134): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(134): inferring latch(es) for variable "count", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Vend_FSM.v(134): inferring latch(es) for variable "stop", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "_change[0]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "_change[1]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "_change[2]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "stop" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[0]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[1]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[2]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[3]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[4]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[5]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[6]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[7]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[8]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[9]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[10]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[11]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[12]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[13]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[14]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[15]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[16]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[17]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[18]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[19]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[20]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[21]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[22]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[23]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[24]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[25]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[26]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[27]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[28]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[29]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[30]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "count[31]" at Vend_FSM.v(148)
+Info (10041): Inferred latch for "next_state[0]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "next_state[1]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "next_state[2]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "next_state[3]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "next_state[4]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "next_state[5]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "vend_enable[0]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "vend_enable[1]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "vend_enable[2]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "vend_enable[3]" at Vend_FSM.v(77)
+Info (10041): Inferred latch for "return[0]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "return[1]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "return[2]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "return[3]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "return[4]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "return[5]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "state[0]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "state[1]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "state[2]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "state[3]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "state[4]" at Vend_FSM.v(60)
+Info (10041): Inferred latch for "state[5]" at Vend_FSM.v(60)
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "vend_enable[3]" merged with LATCH primitive "vend_enable[0]"
     Info (13026): Duplicate LATCH primitive "vend_enable[2]" merged with LATCH primitive "vend_enable[1]"
 Warning (13012): Latch vend_enable[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1]$latch
 Warning (13012): Latch vend_enable[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1]$latch
+Warning (13012): Latch state[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clock
+Warning (13012): Latch state[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clock
+Warning (13012): Latch state[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clock
+Warning (13012): Latch state[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal clock
+Warning (13012): Latch _change[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal WideOr2
+Warning (13012): Latch _change[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal WideOr2
 Warning (13012): Latch next_state[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1]$latch
 Warning (13012): Latch next_state[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1]$latch
 Warning (13012): Latch next_state[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1]$latch
 Warning (13012): Latch next_state[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1]$latch
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "state[0]" is stuck at GND
     Warning (13410): Pin "state[5]" is stuck at GND
     Warning (13410): Pin "_change[0]" is stuck at GND
+    Warning (13410): Pin "return[0]" is stuck at GND
+    Warning (13410): Pin "return[5]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file D:/LOGIC DESIGN/Exp6/output_files/Exp6.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock"
-    Warning (15610): No output dependent on input pin "_cancel"
-Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 29 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4591 megabytes
-    Info: Processing ended: Tue Dec 17 13:44:17 2019
-    Info: Elapsed time: 00:00:02
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 42 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4592 megabytes
+    Info: Processing ended: Tue Dec 17 22:31:18 2019
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
